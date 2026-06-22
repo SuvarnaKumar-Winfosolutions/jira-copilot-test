@@ -40,14 +40,50 @@ def sum_two_numbers(a, b):
 
 # Import and call the even/odd checker from OddOrEven.py per PROJ1-15
 try:
-    from OddOrEven import is_even
+	from OddOrEven import is_even
 
-    def demonstrate_even_check():
-        examples = [2, 3, 0, -1]
-        for v in examples:
-            print(f"{v} -> {'even' if is_even(v) else 'odd'}")
+	def demonstrate_even_check():
+		examples = [2, 3, 0, -1]
+		for v in examples:
+			print(f"{v} -> {'even' if is_even(v) else 'odd'}")
 
-    demonstrate_even_check()
+	demonstrate_even_check()
 except Exception:
-    # If the module isn't present, skip the demonstration to keep existing behavior
-    pass
+	# If the module isn't present, skip the demonstration to keep existing behavior
+	pass
+
+
+def print_primes_1_to_50():
+	"""Print prime numbers from 1 to 50 inclusive."""
+	def is_prime(n):
+		if n < 2:
+			return False
+		if n == 2:
+			return True
+		if n % 2 == 0:
+			return False
+		i = 3
+		while i * i <= n:
+			if n % i == 0:
+				return False
+			i += 2
+		return True
+
+	primes = [str(n) for n in range(1, 51) if is_prime(n)]
+	print("Prime numbers from 1 to 50:", ", ".join(primes))
+
+
+def print_factors(n: int):
+	"""Print factors of n."""
+	factors = [str(i) for i in range(1, n + 1) if n % i == 0]
+	print(f"Factors of {n}: {', '.join(factors)}")
+
+
+def main():
+	print_primes_1_to_50()
+	# Per PROJ1-17: print the factors of 50
+	print_factors(50)
+
+
+# Call the main function per ticket PROJ1-16
+main()
