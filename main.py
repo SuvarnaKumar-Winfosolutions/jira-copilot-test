@@ -36,3 +36,18 @@ def sum_two_numbers(a, b):
 		int|float: The sum of a and b.
 	"""
 	return a + b
+
+
+# Import and call the even/odd checker from OddOrEven.py per PROJ1-15
+try:
+    from OddOrEven import is_even
+
+    def demonstrate_even_check():
+        examples = [2, 3, 0, -1]
+        for v in examples:
+            print(f"{v} -> {'even' if is_even(v) else 'odd'}")
+
+    demonstrate_even_check()
+except Exception:
+    # If the module isn't present, skip the demonstration to keep existing behavior
+    pass
