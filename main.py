@@ -1,9 +1,28 @@
+from datetime import date
+
+
 def print_hello_world():
 	"""Print 'hello world' to stdout."""
 	print("hello world")
 
 
+def print_today_date():
+	"""Print today's date in ISO format (YYYY-MM-DD)."""
+	today = date.today()
+	print(today.isoformat())
+
+
 print_hello_world()
+print_today_date()
+
+def print_week_days():
+	"""Print total days in a week and their names."""
+	days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+	print(f"Total days in a week: {len(days)}")
+	print("Days:", ", ".join(days))
+
+
+print_week_days()
 
 
 def sum_two_numbers(a, b):
