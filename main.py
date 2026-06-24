@@ -1,34 +1,17 @@
-from datetime import date
-
-
 def print_hello_world():
 	"""Print 'hello world' to stdout."""
 	print("hello world")
 
 
-def print_today_date():
-	"""Print today's date in ISO format (YYYY-MM-DD)."""
-	today = date.today()
-	print(today.isoformat())
-
-
 print_hello_world()
-print_today_date()
-
-def print_week_days():
-	"""Print total days in a week and their names."""
-	days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-	print(f"Total days in a week: {len(days)}")
-	print("Days:", ", ".join(days))
 
 
-print_week_days()
+def print_mcp_configured():
+    """Print the MCP configuration confirmation message."""
+    print("MCPs were configured propertly")
 
 
-def greet():
-	"""Print a simple greeting to stdout."""
-	print("Hello")
-
+print_mcp_configured()
 
 
 def sum_two_numbers(a, b):
@@ -44,53 +27,33 @@ def sum_two_numbers(a, b):
 	return a + b
 
 
-# Import and call the even/odd checker from OddOrEven.py per PROJ1-15
-try:
-	from OddOrEven import is_even
-
-	def demonstrate_even_check():
-		examples = [2, 3, 0, -1]
-		for v in examples:
-			print(f"{v} -> {'even' if is_even(v) else 'odd'}")
-
-	demonstrate_even_check()
-except Exception:
-	# If the module isn't present, skip the demonstration to keep existing behavior
-	pass
-
-
-def print_primes_1_to_50():
-	"""Print prime numbers from 1 to 50 inclusive."""
-	def is_prime(n):
-		if n < 2:
-			return False
-		if n == 2:
-			return True
-		if n % 2 == 0:
-			return False
-		i = 3
-		while i * i <= n:
-			if n % i == 0:
-				return False
-			i += 2
-		return True
-
-	primes = [str(n) for n in range(1, 51) if is_prime(n)]
-	print("Prime numbers from 1 to 50:", ", ".join(primes))
+def print_perfect_squares(start=10, end=100):
+	"""Print all perfect squares between start and end (inclusive)."""
+	n = 1
+	# find the first square >= start
+	while n * n < start:
+		n += 1
+	squares = []
+	while n * n <= end:
+		squares.append(n * n)
+		n += 1
+	for s in squares:
+		print(s)
 
 
-def print_factors(n: int):
-	"""Print factors of n."""
-	factors = [str(i) for i in range(1, n + 1) if n % i == 0]
-	print(f"Factors of {n}: {', '.join(factors)}")
+# print perfect squares between 10 and 100 as requested by PROJ1-20
+print_perfect_squares()
 
 
-def main():
-	greet()
-	print_primes_1_to_50()
-	# Per PROJ1-17: print the factors of 50
-	print_factors(50)
+def print_is_positive(value=10):
+    """Print whether `value` is a positive number or not."""
+    if value > 0:
+        print(f"{value} is a positive number")
+    elif value < 0:
+        print(f"{value} is a negative number")
+    else:
+        print(f"{value} is zero")
 
 
-# Call the main function per ticket PROJ1-16
-main()
+# Print whether 10 is positive as requested by PROJ1-21
+print_is_positive(10)
