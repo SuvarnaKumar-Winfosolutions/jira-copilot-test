@@ -68,3 +68,12 @@ print_is_positive(10)
 
 # Print whether -10 is negative as requested by PROJ1-22
 print_is_positive(-10)
+
+
+def print_welcome():
+	"""Print a welcome message for PROJ1-24."""
+	print("welcome")
+
+
+# Print welcome as requested by PROJ1-24
+print_welcome()
