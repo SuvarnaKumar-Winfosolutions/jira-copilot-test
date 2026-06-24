@@ -65,3 +65,6 @@ def print_is_positive(value=10):
 
 # Print whether 10 is positive as requested by PROJ1-21
 print_is_positive(10)
+
+# Print whether -10 is negative as requested by PROJ1-22
+print_is_positive(-10)
