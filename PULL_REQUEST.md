@@ -1,0 +1,1 @@
+PROJ1-25: Add print_welcome_ai() to print "Welcome to AI world"
