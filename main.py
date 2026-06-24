@@ -77,3 +77,12 @@ def print_welcome():
 
 # Print welcome as requested by PROJ1-24
 print_welcome()
+
+
+def print_welcome_ai():
+	"""Print the welcome message requested by PROJ1-25."""
+	print("Welcome to AI world")
+
+
+# Print welcome for PROJ1-25
+print_welcome_ai()
