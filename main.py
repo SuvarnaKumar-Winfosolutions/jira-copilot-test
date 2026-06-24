@@ -6,6 +6,14 @@ def print_hello_world():
 print_hello_world()
 
 
+def print_hello_suvarna():
+	"""Print the greeting requested by PRJ-5."""
+	print("hello suvarna kumar")
+
+
+print_hello_suvarna()
+
+
 def print_mcp_configured():
     """Print the MCP configuration confirmation message."""
     print("MCPs were configured propertly")
@@ -46,13 +54,13 @@ print_perfect_squares()
 
 
 def print_is_positive(value=10):
-    """Print whether `value` is a positive number or not."""
-    if value > 0:
-        print(f"{value} is a positive number")
-    elif value < 0:
-        print(f"{value} is a negative number")
-    else:
-        print(f"{value} is zero")
+	"""Print whether `value` is a positive number or not."""
+	if value > 0:
+		print(f"{value} is a positive number")
+	elif value < 0:
+		print(f"{value} is a negative number")
+	else:
+		print(f"{value} is zero")
 
 
 # Print whether 10 is positive as requested by PROJ1-21
