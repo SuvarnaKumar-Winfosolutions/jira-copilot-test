@@ -14,12 +14,25 @@ def print_hello_suvarna():
 print_hello_suvarna()
 
 
-def print_mcp_configured():
-    """Print the MCP configuration confirmation message."""
-    print("MCPs were configured propertly")
+from datetime import date
+
+def print_token_based_mcp_configured():
+    """Print that token-based MCPs are configured instead of browser-based login."""
+    print("Token-based MCPs are configured instead of browser-based login")
 
 
-print_mcp_configured()
+# Print the token-based MCP configuration message as requested by PROJ1-27
+print_token_based_mcp_configured()
+
+
+def DateToday():
+    """Print today's date."""
+    today = date.today()
+    print(today.isoformat())
+
+
+# Print today's date as requested by PROJ1-28
+DateToday()
 
 
 def sum_two_numbers(a, b):
@@ -77,3 +90,17 @@ def print_welcome():
 
 # Print welcome as requested by PROJ1-24
 print_welcome()
+
+
+def print_welcome_ai():
+	"""Print the welcome message requested by PROJ1-25."""
+	print("Welcome to AI world")
+
+
+# Print welcome for PROJ1-25
+print_welcome_ai()
+
+# Import and call thursday function for PRJ-7
+from Thursday import say_thursday
+
+say_thursday()
